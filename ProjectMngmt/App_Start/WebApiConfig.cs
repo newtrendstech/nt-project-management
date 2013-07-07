@@ -5,7 +5,7 @@ using System.Web.Http;
 
 using System.Web.Http.OData.Builder;
 
-using ProjectMngmt.Models;
+using ProjectMngmt.DAL.Entity;
 
 namespace ProjectMngmt
 {
