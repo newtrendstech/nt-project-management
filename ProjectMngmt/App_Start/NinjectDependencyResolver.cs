@@ -57,6 +57,9 @@ namespace ProjectMngmt.App_Start
             : base(kernel)
         {
             this.kernel = kernel;
+
+            //GlobalConfiguration.Configuration.Services.GetTraceWriter().Error(new HttpRequestMessage(), "urlzip.Infrastructure.NinjectResolver", "Error in Ninject resolver");
+            //GlobalConfiguration.Configuration.Services.GetTraceWriter().Fatal(new HttpRequestMessage(), "urlzip.Infrastructure.NinjectResolver", "Fatal in Ninject resolver");        
         }
 
         public IDependencyScope BeginScope()

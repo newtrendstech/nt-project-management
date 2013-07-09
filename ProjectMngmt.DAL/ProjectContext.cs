@@ -17,7 +17,7 @@ namespace ProjectMngmt.DAL
 
         static ProjectContext()
         {
-            //
+            Database.SetInitializer(new ProjectContextInitializer());
         }
 
         public DbSet<Client> Clients { get; set; }

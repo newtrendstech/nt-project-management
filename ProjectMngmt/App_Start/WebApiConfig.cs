@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
-
+using System.Web.Http.Tracing;
 using System.Web.Http.OData.Builder;
 
 using ProjectMngmt.DAL.Entity;
@@ -13,6 +13,9 @@ namespace ProjectMngmt
     {
         public static void Register(HttpConfiguration config)
         {
+            // Register NLogger
+            config.Services.Replace(typeof(ITraceWriter), new NLogger());
+
             config.EnableSystemDiagnosticsTracing();
 
             ODataModelBuilder modelBuilder = new ODataConventionModelBuilder();
