@@ -12,7 +12,7 @@ namespace ProjectMngmt.App_Start
 {
     // Provides a Ninject implementation of IDependencyScope
     // which resolves services using the Ninject container.
-    public class NinjectDependencyScope :IDependencyScope
+    public class NinjectDependencyScope : IDependencyScope
     {
         IResolutionRoot resolver;
 
